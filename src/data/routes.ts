@@ -17,8 +17,8 @@ export const routes: itemRoute[] = [
         icon: "sihdksb"
     },
     {
-        name: "Servicios",
-        path: "/services",
+        name: "Sobre nosotros",
+        path: "/about",
         icon: "sihdksb"
     }
 ]
