@@ -1,15 +1,13 @@
 ---
-import type item from "../interface/item";
-interface Props {
-  service: item;
-}
 const { item } = Astro.props;
 ---
 
 <div>
-  <div>
-    <h1>{item.name}</h1>
-    <img src={item.imgURL} alt={item.name} />
-  </div>
+  <h2>{item.frontmatter.title}</h2>
   <p>{item.description}</p>
+</div>
+<div>
+  <img src={item.frontmatter.img} alt={item.title} />
+  <p>{item.frontmatter.description}</p>
+  <a href={item.url}></a>
 </div>

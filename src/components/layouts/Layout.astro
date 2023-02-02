@@ -1,5 +1,11 @@
 ---
+/** Navbar */
+import { routes } from "../../data";
 import Navbar from "./Navbar.astro";
+
+/** Footer */
+import { socials } from "../../data";
+import Footer from "./Footer.astro";
 ---
 
 <!DOCTYPE html>
@@ -11,9 +17,10 @@ import Navbar from "./Navbar.astro";
     <title>Document</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar routes={routes} />
     <main>
       <slot />
     </main>
+    <Footer socials={socials} />
   </body>
 </html>

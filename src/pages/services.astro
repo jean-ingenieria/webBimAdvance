@@ -1,0 +1,13 @@
+---
+import { isHTMLBytes } from "astro/dist/runtime/server/escape";
+import Grid from "../components/layouts/Grid.astro";
+import Layout from "../components/layouts/Layout.astro";
+import { services } from "../data";
+---
+
+<Layout>
+  <div>
+    <h2>Servicios ofrecidos</h2>
+  </div>
+  <Grid items={services} limite={services.length} />
+</Layout>

@@ -1,0 +1,22 @@
+---
+/** Layout */
+import Layout from "../components/layouts/Layout.astro";
+
+/** Mission and Hero */
+import HeroMision from "../components/layouts/HeroMision.astro";
+import { mission } from "../data";
+import { hero } from "../data";
+
+/** Services and Projetcs */
+import List from "../components/layouts/List.astro";
+import { services } from "../data";
+import Grid from "../components/layouts/Grid.astro";
+const projects = await Astro.glob("./projects/*.mdx");
+---
+
+<Layout>
+  <HeroMision heroMission={hero} />
+  <List items={services} limite={4} path="/services" />
+  <Grid items={projects} limite={4} path="/projects" />
+  <HeroMision heroMission={mission} />
+</Layout>

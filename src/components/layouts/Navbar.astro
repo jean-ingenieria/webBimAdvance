@@ -1,19 +1,20 @@
 ---
-import type itemRoute from "../../interface/itemRoute";
-import itemInfo from "../../interface/itemInfo";
-import itemSocial from "../../interface/itemSocial";
-
-interface Props {
-  routes: itemRoute[];
-  info: item
-}
-const { routes } = Astro.glob;
+const { routes } = Astro.props;
 ---
 
 <nav>
   <div>
-    <a href="/">
-      {}
-    </a>
+    <a href="/"> </a>
   </div>
+  <ul>
+    {
+      routes.map((route) => {
+        return (
+          <li>
+            <a href={route.path}>{route.name}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
 </nav>

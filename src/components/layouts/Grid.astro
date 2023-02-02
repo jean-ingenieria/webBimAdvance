@@ -5,7 +5,11 @@ const itemsLimite = items.slice(0, limite);
 ---
 
 <div>
-  {itemsLimite.map((item) => <Item item={item} />)}
+  {
+    itemsLimite.map((item) => {
+      return <Item item={item} />;
+    })
+  }
   <div>
     <a href={path}>Ver mas</a>
   </div>
